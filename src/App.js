@@ -7,6 +7,27 @@ import SearchGuide from './components/SearchGuide';
 const re = /^[a-zA-Z0-9-_]+$/;
 const baseUrl = "http://api.github.com/users/";
 
+// put your github oauth api client_id and client_secret here
+// const config = {
+//   params: {
+//     client_id: "some-string",
+//       client_secret: "some-string"
+//   }
+// };
+
+// sample axios request with above config params
+
+// axios.get(baseUrl + name, config)
+//   .then((response) => {
+//     this.setState({
+//       repos: response.data
+//     });
+//   })
+//   .catch((error) => {
+//     console.clear();
+//   });
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,12 +41,7 @@ class App extends Component {
     };
   };
   fetchRepos = (name) => {
-    axios.get(baseUrl + name + "/repos", {
-      params: {
-        client_id: "3626c90e04f2cc553787",
-        client_secret: "c758510dd24758f8e427ebde120be128b35f917e"
-      }
-    })
+    axios.get(baseUrl + name + "/repos")
       .then((response) => {
         this.setState({
           repos: response.data
@@ -37,12 +53,7 @@ class App extends Component {
   };
 
   fetchStarredRepos = (name) => {
-    axios.get(baseUrl + name + "/starred", {
-      params: {
-        client_id: "3626c90e04f2cc553787",
-        client_secret: "c758510dd24758f8e427ebde120be128b35f917e"
-      }
-    })
+    axios.get(baseUrl + name + "/starred")
       .then((response) => {
         this.setState({
           starred: response.data
@@ -54,12 +65,7 @@ class App extends Component {
   };
 
   fetchFollowers = (name) => {
-    axios.get(baseUrl + name + "/followers", {
-      params: {
-        client_id: "3626c90e04f2cc553787",
-        client_secret: "c758510dd24758f8e427ebde120be128b35f917e"
-      }
-    })
+    axios.get(baseUrl + name + "/followers")
       .then((response) => {
         this.setState({
           followers: response.data
@@ -71,12 +77,7 @@ class App extends Component {
   };
 
   fetchFollowings = (name) => {
-    axios.get(baseUrl + name + "/following", {
-      params: {
-        client_id: "3626c90e04f2cc553787",
-        client_secret: "c758510dd24758f8e427ebde120be128b35f917e"
-      }
-    })
+    axios.get(baseUrl + name + "/following")
       .then((response) => {
         this.setState({
           followings: response.data
@@ -88,12 +89,7 @@ class App extends Component {
   };
   fetchUserDetails = (username) => {
     if (re.test(username)) {
-      axios.get(baseUrl + username, {
-        params: {
-          client_id: "3626c90e04f2cc553787",
-          client_secret: "c758510dd24758f8e427ebde120be128b35f917e"
-        }
-      })
+      axios.get(baseUrl + username)
         .then((response) => {
           this.setState({
             userDetails: response.data
