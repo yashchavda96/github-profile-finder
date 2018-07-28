@@ -56,23 +56,31 @@ const UserProfile = ({ userDetails, repos, starred, followers, followings }) => 
               <div className="tab-content" id="pills-tabContent">
                 <div className="tab-pane fade show active" id="pills-repos" role="tabpanel" aria-labelledby="pills-repos-tab">
                   <Repos repos={repos} />
-                  <br />
-                  <a href={url + "?tab=repositories"} className="btn btn-primary" target="_blank">View All Repositories</a>
+                  {
+                    repos.length === 0 ? <h5>No repositories...</h5> :
+                      <a href={url + "?tab=repositories"} className="btn btn-primary" target="_blank">View All Repositories</a>
+                  }
                 </div>
                 <div className="tab-pane fade" id="pills-starred" role="tabpanel" aria-labelledby="pills-starred-tab">
                   <Repos repos={starred} />
-                  <br />
-                  <a href={url + "?tab=stars"} className="btn btn-primary" target="_blank">View All Starred Repositories</a>
+                  {
+                    starred.length === 0 ? <h5>No starred repositories...</h5> :
+                      <a href={url + "?tab=stars"} className="btn btn-primary" target="_blank">View All Starred Repositories</a>
+                  }
                 </div>
                 <div className="tab-pane fade" id="pills-followers" role="tabpanel" aria-labelledby="pills-followers-tab">
                   <People people={followers} />
-                  <br />
-                  <a href={url + "?tab=followers"} className="btn btn-primary" target="_blank">View All Followers</a>
+                  {
+                    followers.length === 0 ? <h5>No followers...</h5> :
+                      <a href={url + "?tab=followers"} className="btn btn-primary" target="_blank">View All Followers</a>
+                  }
                 </div>
                 <div className="tab-pane fade" id="pills-followings" role="tabpanel" aria-labelledby="pills-followings-tab">
                   <People people={followings} />
-                  <br />
-                  <a href={url + "?tab=following"} className="btn btn-primary text-center" target="_blank">View All Followings</a>
+                  {
+                    followings.length === 0 ? <h5>No following...</h5> :
+                      <a href={url + "?tab=following"} className="btn btn-primary text-center" target="_blank">View All Followings</a>
+                  }
                 </div>
               </div>
             </div>
