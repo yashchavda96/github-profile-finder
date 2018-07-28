@@ -3,6 +3,9 @@ import Overview from './Overview';
 import Repos from './Repos';
 import People from './People';
 
+const viewBtn = {
+  marginTop: "20px"
+}
 const baseUrl = 'https://github.com/';
 
 const UserProfile = ({ userDetails, repos, starred, followers, followings }) => {
@@ -58,28 +61,28 @@ const UserProfile = ({ userDetails, repos, starred, followers, followings }) => 
                   <Repos repos={repos} />
                   {
                     repos.length === 0 ? <h5>No repositories...</h5> :
-                      <a href={url + "?tab=repositories"} className="btn btn-primary" target="_blank">View All Repositories</a>
+                      <a href={url + "?tab=repositories"} className="btn btn-primary" target="_blank" style={viewBtn}>View All Repositories</a>
                   }
                 </div>
                 <div className="tab-pane fade" id="pills-starred" role="tabpanel" aria-labelledby="pills-starred-tab">
                   <Repos repos={starred} />
                   {
                     starred.length === 0 ? <h5>No starred repositories...</h5> :
-                      <a href={url + "?tab=stars"} className="btn btn-primary" target="_blank">View All Starred Repositories</a>
+                      <a href={url + "?tab=stars"} className="btn btn-primary" target="_blank" style={viewBtn}>View All Starred Repositories</a>
                   }
                 </div>
                 <div className="tab-pane fade" id="pills-followers" role="tabpanel" aria-labelledby="pills-followers-tab">
                   <People people={followers} />
                   {
                     followers.length === 0 ? <h5>No followers...</h5> :
-                      <a href={url + "?tab=followers"} className="btn btn-primary" target="_blank">View All Followers</a>
+                      <a href={url + "?tab=followers"} className="btn btn-primary" target="_blank" style={viewBtn}>View All Followers</a>
                   }
                 </div>
                 <div className="tab-pane fade" id="pills-followings" role="tabpanel" aria-labelledby="pills-followings-tab">
                   <People people={followings} />
                   {
                     followings.length === 0 ? <h5>No following...</h5> :
-                      <a href={url + "?tab=following"} className="btn btn-primary text-center" target="_blank">View All Followings</a>
+                      <a href={url + "?tab=following"} className="btn btn-primary" target="_blank" style={viewBtn}>View All Followings</a>
                   }
                 </div>
               </div>

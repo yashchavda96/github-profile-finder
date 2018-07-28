@@ -27,16 +27,12 @@ class App extends Component {
       }
     })
       .then((response) => {
-        console.log(response);
-
         this.setState({
           repos: response.data
         });
-
       })
       .catch((error) => {
-        // console.clear();
-
+        console.clear();
       });
   };
 
@@ -48,16 +44,12 @@ class App extends Component {
       }
     })
       .then((response) => {
-        console.log(response);
-
         this.setState({
           starred: response.data
         });
-
       })
       .catch((error) => {
-        // console.clear();
-
+        console.clear();
       });
   };
 
@@ -69,16 +61,12 @@ class App extends Component {
       }
     })
       .then((response) => {
-        console.log(response);
-
         this.setState({
           followers: response.data
         });
-
       })
       .catch((error) => {
-        // console.clear();
-
+        console.clear();
       });
   };
 
@@ -90,16 +78,12 @@ class App extends Component {
       }
     })
       .then((response) => {
-        console.log(response);
-
         this.setState({
           followings: response.data
         });
-
       })
       .catch((error) => {
-        // console.clear();
-
+        console.clear();
       });
   };
   fetchUserDetails = (username) => {
@@ -111,7 +95,6 @@ class App extends Component {
         }
       })
         .then((response) => {
-          console.log(response);
           this.setState({
             userDetails: response.data
           });
@@ -121,9 +104,17 @@ class App extends Component {
           this.fetchFollowings(username);
         })
         .catch((error) => {
-          // console.clear();
-
+          console.clear();
         });
+    } else {
+      this.setState({
+        username: "",
+        userDetails: "",
+        repos: [],
+        starred: [],
+        followers: [],
+        followings: []
+      });
     }
   };
   render() {

@@ -12,7 +12,7 @@ const Repos = ({ repos }) => {
               {repo.description != "" ? <p className="card-text">{repo.description}</p> : ""}
             </div>
             <div className="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-              <a href={repo.html_url} class="btn btn-dark" style={{ marginTop: "10px", marginRight: "20px" }} target="_blank">REPO PAGE</a>
+              <a href={repo.html_url} class="btn btn-dark" style={{ float: "right", marginTop: "10px", marginRight: "20px" }} target="_blank">REPO PAGE</a>
             </div>
           </div>
         </div>
