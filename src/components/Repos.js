@@ -9,7 +9,7 @@ const Repos = ({ repos }) => {
           <div className="row">
             <div className="col-xs-12 col-sm-9 col-md-10 col-lg-10">
               <h5 className="card-title">{repo.name}</h5>
-              {repo.description != "" ? <p className="card-text">{repo.description}</p> : ""}
+              {repo.description !== "" ? <p className="card-text">{repo.description}</p> : ""}
             </div>
             <div className="col-xs-12 col-sm-3 col-md-2 col-lg-2">
               <a href={repo.html_url} class="btn btn-dark" style={{ float: "right", marginTop: "10px", marginRight: "20px" }} target="_blank">REPO PAGE</a>
