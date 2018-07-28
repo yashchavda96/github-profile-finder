@@ -1,4 +1,4 @@
-#GITHUB PROFILE FINDER
+# GITHUB PROFILE FINDER
 
 It is simple github profile finder react web application. You can view user's all github details at one place.
 
