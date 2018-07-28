@@ -2,12 +2,16 @@
 
 It is simple github profile finder react web application. You can view user's all github details at one place.
 
-How to use
+How to deploy locally
 ----------
 
-1. Go to [github-profile-finder](http://yashchavda96.github.io/github-profile-finder)
+1. Go to Terminal 
 
-2. Enter github username
+2. Enter npm run build
+
+3. Enter npm install -g serve
+
+4. Enter serve -s build
 
 
 Please note
