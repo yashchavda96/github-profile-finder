@@ -16,7 +16,7 @@ const UserProfile = ({ userDetails }) => {
                         <div className="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                             <img className="thumbnail" style={{ width: "100%", borderRadius: "4px" }} src={userDetails.avatar_url} alt="user_avatar" />
                             <br />
-                            <a className="btn btn-primary btn-block" style={{ marginTop: "10px" }} href={userDetails.html_url}>View Profile</a>
+                            <a className="btn btn-primary btn-block" rel="noopener noreferrer"style={{ marginTop: "10px" }} href={userDetails.html_url}>View Profile</a>
                             <br />
                         </div>
                         <div className="col-xs-12 col-sm-9 col-md-9 col-lg-9">

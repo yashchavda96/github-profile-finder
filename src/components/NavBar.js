@@ -24,8 +24,8 @@ class NavBar extends Component {
       <nav className="navbar navbar-dark bg-primary" >
         <span className="navbar-brand mb-0 h1">Github Profile Finder</span>
         <form className="form-inline" onSubmit={(e) => e.preventDefault()}>
-          <input className="form-control mr-sm-2" type="text" placeholder="Search by username" value={this.state.username} onChange={this.handleChange} />
-          <button class="btn btn-light btn-outline-light my-2 my-sm-0" type="submit" onClick={this.handleSubmit}>Search</button>
+          <input className="form-control mr-sm-2" type="text" placeholder="Search by username" value={this.state.username}  onChange={this.handleChange} />
+          <button className="btn btn-light btn-outline-light my-2 my-sm-0" type="submit" onClick={this.handleSubmit}>Search</button>
         </form>
       </nav>
     );
