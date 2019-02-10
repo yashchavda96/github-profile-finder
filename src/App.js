@@ -5,7 +5,7 @@ import UserProfile from './components/UserProfile';
 import SearchGuide from './components/SearchGuide';
 
 const re = /^[a-zA-Z0-9-_]+$/;
-const baseUrl = "http://api.github.com/users/";
+const baseUrl = "https://api.github.com/users/";
 
 // put your github oauth api client_id and client_secret here
 // const config = {
